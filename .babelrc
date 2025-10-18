@@ -1,4 +1,11 @@
 {
-  "presets": [ "es2015", "react" ],
-  "plugins": [ "transform-class-properties" ]
+  "presets": [
+    ["@babel/preset-env", { "targets": { "browsers": ["last 2 versions", "> 0.25%"] } }],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-class-properties", { "loose": true }],
+    ["@babel/plugin-transform-private-methods", { "loose": true }],
+    ["@babel/plugin-transform-private-property-in-object", { "loose": true }]
+  ]
 }
